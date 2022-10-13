@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPageViewController" customModule="clockTry" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="ZXS-bU-47A" id="rcc-D4-5Yy"/>
+                <outlet property="addPagePickerView" destination="zzD-KW-pSa" id="DlD-o8-qpF"/>
+                <outlet property="addPageTableView" destination="Lye-pI-zdv" id="9Ey-4W-MG8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lye-pI-zdv">
+                    <rect key="frame" x="0.0" y="167" width="375" height="166.5"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="systemBrownColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXS-bU-47A">
+                    <rect key="frame" x="37.5" y="373.5" width="300" height="36.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                    <connections>
+                        <action selector="saveDataToRealm:" destination="-1" eventType="touchUpInside" id="zgM-dw-gJs"/>
+                    </connections>
+                </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzD-KW-pSa">
+                    <rect key="frame" x="57" y="0.0" width="262" height="167"/>
+                </pickerView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Lye-pI-zdv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="5Kg-2P-mci"/>
+                <constraint firstItem="zzD-KW-pSa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6sN-ba-M5U"/>
+                <constraint firstItem="Lye-pI-zdv" firstAttribute="top" secondItem="zzD-KW-pSa" secondAttribute="bottom" id="Bs1-pf-jK1"/>
+                <constraint firstItem="zzD-KW-pSa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="DqP-Xu-nFY"/>
+                <constraint firstItem="ZXS-bU-47A" firstAttribute="top" secondItem="Lye-pI-zdv" secondAttribute="bottom" constant="40" id="K2x-dw-Bzv"/>
+                <constraint firstItem="Lye-pI-zdv" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="RcI-DT-NmE"/>
+                <constraint firstItem="ZXS-bU-47A" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.8" id="aUm-di-d5p"/>
+                <constraint firstItem="zzD-KW-pSa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.25" id="bLY-ZZ-GQW"/>
+                <constraint firstItem="Lye-pI-zdv" firstAttribute="centerX" secondItem="zzD-KW-pSa" secondAttribute="centerX" id="f40-cW-C6A"/>
+                <constraint firstItem="ZXS-bU-47A" firstAttribute="centerX" secondItem="Lye-pI-zdv" secondAttribute="centerX" id="jKy-po-VZH"/>
+                <constraint firstItem="ZXS-bU-47A" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.0545775" id="s8y-W7-x8w"/>
+                <constraint firstItem="Lye-pI-zdv" firstAttribute="height" secondItem="zzD-KW-pSa" secondAttribute="height" id="t1R-NF-QmI"/>
+                <constraint firstItem="zzD-KW-pSa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="xKy-7j-GYI"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
